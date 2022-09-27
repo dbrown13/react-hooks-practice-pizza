@@ -6,7 +6,7 @@ function Pizza( {pizza} ) {
     <tr>
       <td>{pizza.topping}</td>
       <td>{pizza.size}</td>
-      <td>{pizza.vegetarian}</td>
+      <td>{pizza.vegetarian ? "Yes" : "No"}</td>
       <td>
         <button type="button" className="btn btn-primary">
           Edit Pizza

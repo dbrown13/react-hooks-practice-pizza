@@ -4,7 +4,12 @@ import Pizza from "./Pizza";
 function PizzaList({ pizzas }) {
   // console.log(pizzas)
   let pizzaList = pizzas.map((pizza) => {
-    return <Pizza pizza={pizza} singlePizza={pizza} key={pizza.id} />;
+    return <Pizza 
+      pizza={pizza} 
+      singlePizza={pizza} 
+      key={pizza.id} 
+      size={pizza.size} 
+      vegetarian={pizza.vegetarian}/>;
   });
 
   return (

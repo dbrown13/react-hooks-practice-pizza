@@ -7,7 +7,6 @@ function App() {
   const [pizzas, setPizzas] = useState(null)
 
 
-
   useEffect(() => {
     fetch("http://localhost:3001/pizzas")
     .then((response) => response.json())
