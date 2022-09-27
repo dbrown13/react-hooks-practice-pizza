@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Pizza from "./Pizza";
 
-function PizzaList({ pizzas }) {
-  // console.log(pizzas)
-  let pizzaList = pizzas.map((pizza) => {
-    return <Pizza 
-      pizza={pizza} 
-      singlePizza={pizza} 
-      key={pizza.id} 
-      size={pizza.size} 
-      vegetarian={pizza.vegetarian}/>;
+function PizzaList({ pizzas, onSelectPizza }) {
+  
+  const pizzaMap = pizzas.map((pizza) => {
+    return (
+      <Pizza 
+        onSelectPizza={onSelectPizza}
+        pizza={pizza} 
+        key={pizza.id} 
+      />
+      );
   });
 
   return (
@@ -23,7 +24,7 @@ function PizzaList({ pizzas }) {
         </tr>
       </thead>
       <tbody>
-        {pizzaList}
+        {pizzaMap}
       </tbody>
     </table>
   );
